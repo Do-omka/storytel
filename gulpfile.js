@@ -20,8 +20,8 @@ const
 	}
 
 function html() {
-	return gulp.src('src/views/*.html')
-		.pipe(htmlinclude({basepath: './src/tpl'}))
+	return gulp.src('src/html/*.html')
+		.pipe(htmlinclude())
 		.pipe(gulp.dest('docs'))
 		.pipe(bs.stream())
 }
@@ -65,7 +65,7 @@ function fnt() {
 
 // watch
 function watch_html() {
-	return gulp.watch(['src/views/*.html', 'src/tpl/**'], html)
+	return gulp.watch('src/html/', html)
 }
 
 function watch_css() {
