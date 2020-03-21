@@ -55,7 +55,7 @@
 	text-align: @align;
 }
 
-.col(@col: 12, @res: 0) {
+.col(@col: auto, @res: 0) {
 	.basis() {
 		& when (@col = auto) {
 			basis: auto;
@@ -82,15 +82,15 @@
 	}
 }
 
-.row(@gap: 15px) {
+.row(@xgap: 15px, @ygap: @xgap) {
 	.r();
-	margin: -@gap;
+	margin: -@ygap -@xgap;
 	
 	> * {
 		.c();
 		flex-shrink: 0;
 		max-width: 100%;
-		padding: @gap;
+		padding: @ygap @xgap;
 		
 		> * {
 			flex-grow: 1;
