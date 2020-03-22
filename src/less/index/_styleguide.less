@@ -29,9 +29,10 @@ body {
 .btn {
 	.cc();
 	flex-direction: row;
+	width: 100%;
 	max-width: 100%;
 	padding: 15px;
-	line-height: 14px;
+	line-height: 24px;
 	font-family: 'Euclid Square';
 	font-weight: 600;
 	font-style: normal;
@@ -47,12 +48,13 @@ body {
 	}
 	
 	&._a1 {
-		color: @grey2;
+		color: @grey1;
 		background-color: @lightgrey1;
 		border: 1px solid @lightgrey3;
 		
 		&:enter,
 		&:active {
+			@color: @grey2;
 			background-color: @lightgrey2;
 		}
 	}
@@ -66,6 +68,10 @@ body {
 		&:active {
 			background-color: @lightgrey3;
 		}
+	}
+	
+	@media (@sm) {
+		width: 255px;
 	}
 }
 
