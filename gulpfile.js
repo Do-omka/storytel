@@ -114,8 +114,16 @@ function watch_icons() {
 
 function serve() {
 	bs.init({
-		server: 'docs',
+		server: {
+			baseDir: 'docs',
+			directory: true,
+			serveStaticOptions: {
+				extensions: ["html"],
+			}
+		},
+		// https: true,
 		ghostMode: false,
+		open: false,
 	})
 }
 
