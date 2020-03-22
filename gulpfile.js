@@ -74,8 +74,8 @@ function icons() {
 	 .pipe(iconfontCss({
 		fontName: 'icons',
 		cssClass: 'ifnt',
-		path: 'src/less/index/_iconfont-template.less',
-		targetPath: '../../src/less/index/_icons.less',
+		path: 'src/less/template/_iconfont-template.less',
+		targetPath: '../../src/less/template/_icons.less',
 		fontPath: 'docs/fnt',
 	 }))
 	 .pipe(iconfont({
