@@ -70,6 +70,7 @@ body {
 }
 
 .input {
+	position: relative;
 	width: 100%;
 	padding: 20px;
 	color: @black;
@@ -81,12 +82,46 @@ body {
 	background-color: @white;
 	border: 1px solid @lightgrey3;
 	border-radius: 6px;
+	input {
+		width: 100%;
+	}
 	
 	&::placeholder {
 		color: @grey1;
 	}
 	&:focus::placeholder {
 		font-size: 0;
+	}
+	
+	&-blur {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 80%;
+		background: linear-gradient(270deg, #FFFFFF 43.23%, rgba(255, 255, 255, 0) 100%);
+		
+		input:focus + & {
+			display: none;
+		}
+	}
+	
+	&._select,
+	&._select input {
+		cursor: text;
+	}
+}
+
+.label {
+	.c();
+	color: @grey1;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 15px;
+	letter-spacing: 0.04em;
+	
+	&-title {
+		margin-bottom: 6px;
 	}
 }
 
