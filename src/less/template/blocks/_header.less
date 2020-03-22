@@ -1,6 +1,11 @@
 .header {
 	position: sticky;
 	top: 0;
+	transition: .2s;
+	
+	&._stuck {
+		background-color: @white;
+	}
 	
 	&-content {
 		.c();
