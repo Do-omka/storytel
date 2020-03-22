@@ -29,7 +29,7 @@
 	}
 	
 	&-navContent {
-		.row(12px);
+		.row(12.5px);
 		flex-direction: column;
 	}
 	
@@ -64,9 +64,13 @@
 	}
 	
 	&-navSubmenu {
+		transition: .2s;
+	}
+	
+	&-navSubcontent {
 		.row(12.5px);
 		flex-direction: column;
-		transition: .2s;
+		background-color: @white;
 	}
 	
 	&-navDrop:not(._active) + &-navSubmenu {
@@ -107,7 +111,7 @@
 			top: 100%;
 			right: @lip;
 			padding: 20px;
-			width: 285px;
+			width: 255px;
 		}
 	}
 	@media (@lgx) {
