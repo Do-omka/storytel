@@ -115,7 +115,6 @@ function watch_icons() {
 function serve() {
 	bs.init({
 		server: 'docs',
-		browser: 'chrome',
 		ghostMode: false,
 	})
 }

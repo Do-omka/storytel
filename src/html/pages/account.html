@@ -1,0 +1,48 @@
+<section class='title'>
+	<div class='container'>
+		<div class='title-content'>
+			<div class='title-item'>
+				<h1>Загруженные материалы</h1>
+			</div>
+			<div class='title-item _btn'>
+				<a href='' class='btn'>Загрузить файл</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class='contents'>
+	<div class='container'>
+		<ul class='contents-content'>
+			@@include('../blocks/contents.html', {"status": "ok"})
+			@@include('../blocks/contents.html', {"status": "mod"})
+			@@for(let i=0; i<4;i++) {
+				@@include('../blocks/contents.html', {"status": "denied"})
+			}
+		</ul>
+	</div>
+</section>
+
+<section class='stats'>
+	<div class='container'>
+		<div class='stats-content'>
+			<div class='stats-item _link'>
+				<a href='' class='btn _a1'>Статистика прослушиваний</a>
+			</div>
+			<div class='stats-item _referral'>
+				<div class='stats-referral'>
+					<div class='stats-referralItem _label'>
+						<span class='label-title'>РЕФЕРАЛЬНАЯ ССЫЛКА</span>
+						<label class='input _select'>
+							<input type='text' value='https://www.storytel.com/ru/ru/categories/3-Detektivy' readonly id='tocopy' />
+							<span class='input-blur'></span>
+						</label>
+					</div>
+					<div class='stats-referralItem _copy'>
+						<button type='button' class='btn' onclick='tocopy.select();document.execCommand("copy")'>Скопировать</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
