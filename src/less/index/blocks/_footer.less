@@ -1,0 +1,39 @@
+.footer {
+	padding: 30px 0;
+	font-size: 14px;
+	margin-top: auto;
+	
+	&-content {
+		.row(12.5px);
+		align-items: center;
+	}
+	
+	&-logo {
+		margin-right: auto;
+	}
+	
+	&-link {
+		color: @dark;
+	}
+	
+	&-mailto {
+		color: @main;
+		line-height: 18px;
+	}
+	
+	@media (@lg) {
+		&-mailto {
+			order: 1;
+		}
+	}
+	
+	@media (@lgx) {
+		&-logo {
+			margin-right: auto;
+		}
+		
+		&-link {
+			.col(12);
+		}
+	}
+}
