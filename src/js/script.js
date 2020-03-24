@@ -11,14 +11,44 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 	})
 	
 	if (document.querySelector('[data-active]')) {
-		let activators = document.querySelectorAll('[data-active]')
-		activators.forEach(function(elem) {
-			elem.addEventListener('click', function(e) {
-				elem.dataset.active.split(', ').forEach(function(target) {
-					if (target === 'this') {
-						elem.classList.toggle('_active')
-					} else if (document.querySelector(target)) {
-						document.querySelector(target).classList.toggle('_active')
+		document.querySelectorAll('[data-active]').forEach((elem)=> {
+			elem.addEventListener('click', (e)=> {
+				elem.getAttribute('data-active').split(', ').forEach((target)=> {
+					switch (target) {
+						case 'this':
+							elem.classList.toggle('_active')
+						break
+						
+						case 'parent':
+							elem.parentElement.classList.toggle('_active')
+						break
+						default:
+							if (document.querySelector(target)) {
+								document.querySelector(target).classList.toggle('_active')
+							}
+						break
+					}
+				})
+			})
+		})
+	}
+	
+	if (document.querySelector('[data-radio-uncheck]')) {
+		document.querySelectorAll('[data-radio-uncheck]').forEach((elem)=> {
+			elem.addEventListener('click', (e)=> {
+				elem.getAttribute('data-radio-uncheck').split(', ').forEach((target)=> {
+					if (document.querySelector('[data-radio-name="'+target+'"]')) {
+						document.querySelectorAll('[data-radio-name="'+target+'"]').forEach((radio)=> {
+							radio.classList.remove('_active')
+						})
+					}
+				})
+				
+				elem.getAttribute('data-radio-for').split(', ').forEach((target)=> {
+					if (document.querySelector('[data-radio-id="'+target+'"]')) {
+						document.querySelectorAll('[data-radio-id="'+target+'"]').forEach((radio)=> {
+							radio.classList.add('_active')
+						})
 					}
 				})
 			})
