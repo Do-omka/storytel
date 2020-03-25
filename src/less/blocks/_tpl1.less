@@ -78,6 +78,7 @@
 	
 	&-contentItemContent {
 		padding-bottom: 40px;
+		transition: .2s;
 	}
 	
 	@media (@sm) {
@@ -130,7 +131,7 @@
 		
 		&-contentToggler:not(._active) ~ &-contentItemContent {
 			.hidden();
-			transition: translateY(-100%);
+			transform: translateY(-100%);
 		}
 	}
 	
