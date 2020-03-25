@@ -35,7 +35,7 @@ function css() {
 	.pipe(less({strictMath: 'on'}))
 		.pipe(postcss([
 			require('postcss-inline-svg')({
-				path: 'docs/img',
+				paths: ['docs/img'],
 			}),
 			// require('postcss-svgo')(svgOptions),
 			require('postcss-pseudo-class-enter'),
