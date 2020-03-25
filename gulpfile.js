@@ -83,6 +83,8 @@ function icons() {
 		prependUnicode: true,
 		formats: ['ttf', 'eot', 'woff', 'woff2'],
 		timestamp: Math.round(Date.now()/1000),
+		fontHeight: '1001',
+		normalize: true,
 	  }))
 	 .pipe(gulp.dest('docs/fnt'))
 }
