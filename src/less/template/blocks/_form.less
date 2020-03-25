@@ -25,9 +25,14 @@
 	
 	&-halved {
 		.row();
+		
+		&._buttons {
+			.row(5px, 7.5px);
+		}
 	}
 	
-	&-halvedItem {
+	&-halvedItem,
+	&-halved._buttons &-halvedItem {
 		.col(12);
 		.col(6, @sm);
 	}
