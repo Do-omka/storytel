@@ -1,6 +1,19 @@
 .form {
+	&-header {
+		margin-bottom: 30px;
+	}
+	
 	&-content {
 		.row(12.5px);
+		
+		&._switch {
+			transition: .2s;
+			
+			&:not(._active) {
+				.hidden();
+				transform: translateY(100%);
+			}
+		}
 	}
 	
 	&-item {
