@@ -6,7 +6,8 @@
 	transition: .2s;
 	z-index: 3;
 	
-	&._stuck {
+	&._stuck,
+	&._stuck &-navSubcontent{
 		background-color: @white;
 	}
 	
@@ -73,7 +74,6 @@
 	&-navSubcontent {
 		.row(12.5px);
 		flex-direction: column;
-		background-color: @white;
 	}
 	
 	&-navDrop:not(._active) + &-navSubmenu {
