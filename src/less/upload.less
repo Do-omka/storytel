@@ -1,0 +1,45 @@
+@import 'template/index';
+@import 'blocks/_tpl1';
+
+.tpl1 {
+	@media (@lg) {
+		&-note {
+			.col(4);
+			order: 1;
+		}
+		
+		&-contentList {
+			.col(4);
+		}
+	}
+}
+
+
+.label {
+	@media (@smx) {
+		&-title._warning {
+			order: 1;
+			
+			.label-titleText {
+				display: none;
+			}
+			
+			.label-hint {
+				width: 100%;
+				text-align: center;
+				margin-top: 10px;
+			}
+		}
+		
+		@media (@lg) {
+			.x1 {
+				.dn();
+			}
+		}
+		@media (@lgx) {
+			.x2 {
+				.dn();
+			}
+		}
+	}
+}

@@ -32,7 +32,7 @@
 				
 				@@for(let i = 0; i < 1; i++) {
 					<li class='tpl1-contentItem _active' data-radio-name='tpl1-radio' data-radio-id='tpl1-radio-`+i+`'>
-						<button type='button' class='tpl1-contentToggler _active' data-active='this'>
+						<button type='button' class='tpl1-contentToggler _active' data-active='this' data-radio-name='tpl1-radio1' data-radio-id='tpl1-radio1-`+i+`' >
 							<h2 class='tpl1-h2'>`+list[i].name+`</h2>
 						</button>
 						<div class='tpl1-contentItemContent'>
@@ -43,7 +43,7 @@
 				
 				@@for(let i=1; i < list.length; i++) {
 					<li class='tpl1-contentItem' data-radio-name='tpl1-radio' data-radio-id='tpl1-radio-`+i+`'>
-						<button type='button' class='tpl1-contentToggler' data-active='this'>
+						<button type='button' class='tpl1-contentToggler' data-active='this' data-radio-name='tpl1-radio1' data-radio-id='tpl1-radio1-`+i+`' >
 							<h2 class='tpl1-h2'>`+list[i].name+`</h2>
 						</button>
 						<div class='tpl1-contentItemContent'>

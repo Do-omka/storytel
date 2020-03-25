@@ -1,0 +1,82 @@
+<form action='' class='form'>
+	<div class='form-content'>
+		<div class='form-item'>
+			<div class='label'>
+				<div class='label-title'>ВИД</div>
+				<div class='form-radio'>
+					<div class='form-radioItem'>
+						<label class='radio'>
+							<input type='radio' name='' class='radio-input' checked />
+							<span class='radio-icon'></span>
+							<span class='radio-title'>Книга</span>
+						</label>
+					</div>
+					<div class='form-radioItem'>
+						<label class='radio'>
+							<input type='radio' name='' class='radio-input' />
+							<span class='radio-icon'></span>
+							<span class='radio-title'>Подкаст</span>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='form-item'>
+			<label class='label'>
+				<span class='label-title'>Название</span>
+				<input type='text' name='' class='input' />
+			</label>
+		</div>
+		<div class='form-item'>
+			<label class='label'>
+				<span class='label-title _hint'>
+					<span>Описание</span>
+					<span class='label-hint _hint'>не более 300 символов</span>
+				</span>
+				<textarea name='' rows='4' class='input'></textarea>
+			</label>
+		</div>
+		<div class='form-item'>
+			<label class='label'>
+				<span class='label-title'>Жанр</span>
+				<input type='text' name='' class='input' />
+			</label>
+		</div>
+		<div class='form-item'>
+			<label class='label'>
+				<span class='label-title'>Автор</span>
+				<input type='text' name='' class='input' />
+			</label>
+		</div>
+		<div class='form-item'>
+			<label class='label'>
+				<span class='label-title'>Чтец</span>
+				<input type='text' name='' class='input' />
+			</label>
+		</div>
+		<div class='form-item'>
+			<label class='label'>
+				<span class='label-title _hint'>
+					<span>Обложка</span>
+					<span class='label-hint _hint'>
+						400x400px
+					</span>
+				</span>
+				<span class='file'>
+					<input type='file' name='' class='file-input' />
+					<span class='file-title'>Выбрать файл .png, .jpg</span>
+				</span>
+			</label>
+		</div>
+		<div class='form-item'>
+			<div class='form-halved'>
+				<div class='form-halvedItem'>
+					<button type='button' class='btn' data-radio-uncheck='tpl1-radio, tpl1-radio1' data-radio-for='tpl1-radio-1, tpl1-radio1-1' onclick="document.querySelector('.tpl1-contentList').scrollIntoView({block: 'start', behavior: 'smooth',})">Далее</button>
+				</div>
+				<div class='form-halvedItem'>
+					<button type='reset' class='btn _a2'>Отменить</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

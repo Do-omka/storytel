@@ -53,14 +53,28 @@
 		&._hint {
 			.row(5px);
 			justify-content: space-between;
+			align-items: center;
 			margin-bottom: 1px;
 		}
 	}
 	
+	&-titleText {
+		
+	}
+	
 	&-hint {
+		
+		&& {
+			display: block;
+		}
+		
 		&._warning {
 			line-height: 26px;
 			color: @main;
+			text-transform: none;
+		}
+		&._hint {
+			text-transform: none;
 		}
 	}
 }
@@ -143,6 +157,8 @@
 			text-decoration: underline;
 		}
 		@media (@smx) {
+			display: flex;
+			justify-content: center;
 			background: @lightgrey1;
 			border: 1.2px dashed @main;
 			border-radius: 8px;
