@@ -41,6 +41,15 @@ body {
 	overflow: hidden;
 }
 
+.link {
+	color: @main;
+	text-decoration: underline;
+	
+	&:enter {
+		color: @darkened;
+	}
+}
+
 .btn {
 	.cc();
 	flex-direction: row;
