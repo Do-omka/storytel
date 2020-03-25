@@ -1,0 +1,28 @@
+@import 'template/index';
+@import 'blocks/_form';
+@import 'blocks/_tpl1';
+
+h1 {
+	margin-top: 50px;
+	margin-bottom: 20px;
+	
+	@media (@sm) {
+		margin-top: 60px;
+	}
+	@media (@lg) {
+		margin-top: 70px;
+		margin-bottom: 60px;
+	}
+}
+.tpl1 {
+	@media (@lg) {
+		&-note {
+			.col(4);
+			order: 1;
+		}
+		
+		&-contentList {
+			.col(4);
+		}
+	}
+}
