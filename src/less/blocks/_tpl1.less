@@ -16,7 +16,13 @@
 	
 	&-note {
 		line-height: 26px;
+		color: @grey1;
 		margin-bottom: 25px;
+		
+		b {
+			font-weight: 600;
+			color: @black;
+		}
 	}
 	
 	&-aside {
@@ -26,6 +32,10 @@
 	&-nav {
 		.row(17.5px);
 		align-content: flex-start;
+	}
+	
+	&-navItem {
+		.col(12);
 	}
 	
 	&-navToggler {
