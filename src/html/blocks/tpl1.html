@@ -13,15 +13,15 @@
 					
 					@@for(let i = 0; i < 1; i++) {
 						<li class='tpl1-navItem'>
-							<button type='button' class='tpl1-navToggler _active' data-radio-uncheck='tpl1-radio' data-radio-for='tpl1-radio-`+i+`' data-radio-name='tpl1-radio' data-radio-id='tpl1-radio-`+i+`'>
-								<h2 class='tpl1-h2'>`+list[i].name+`</h2>
+							<button type='button' class='tpl1-h2 tpl1-navToggler _active' data-radio-uncheck='tpl1-radio' data-radio-for='tpl1-radio-`+i+`' data-radio-name='tpl1-radio' data-radio-id='tpl1-radio-`+i+`'>
+								<h2>`+list[i].name+`</h2>
 							</button>
 						</li>
 					}
 					@@for(let i = 1; i < list.length; i++) {
 						<li class='tpl1-navItem'>
-							<button type='button' class='tpl1-navToggler' data-radio-uncheck='tpl1-radio' data-radio-for='tpl1-radio-`+i+`' data-radio-name='tpl1-radio' data-radio-id='tpl1-radio-`+i+`'>
-								<h2 class='tpl1-h2'>`+list[i].name+`</h2>
+							<button type='button' class='tpl1-h2 tpl1-navToggler' data-radio-uncheck='tpl1-radio' data-radio-for='tpl1-radio-`+i+`' data-radio-name='tpl1-radio' data-radio-id='tpl1-radio-`+i+`'>
+								<h2>`+list[i].name+`</h2>
 							</button>
 						</li>
 					}
@@ -32,8 +32,8 @@
 				
 				@@for(let i = 0; i < 1; i++) {
 					<li class='tpl1-contentItem _active' data-radio-name='tpl1-radio' data-radio-id='tpl1-radio-`+i+`'>
-						<button type='button' class='tpl1-contentToggler _active' data-active='this' data-radio-name='tpl1-radio1' data-radio-id='tpl1-radio1-`+i+`' >
-							<h2 class='tpl1-h2'>`+list[i].name+`</h2>
+						<button type='button' class='tpl1-h2 tpl1-contentToggler _active' data-active='this' data-radio-name='tpl1-radio1' data-radio-id='tpl1-radio1-`+i+`' >
+							<h2>`+list[i].name+`</h2>
 						</button>
 						<div class='tpl1-contentItemContent'>
 							@@include('../contents/`+list[i].content+`.html')
@@ -43,8 +43,8 @@
 				
 				@@for(let i=1; i < list.length; i++) {
 					<li class='tpl1-contentItem' data-radio-name='tpl1-radio' data-radio-id='tpl1-radio-`+i+`'>
-						<button type='button' class='tpl1-contentToggler' data-active='this' data-radio-name='tpl1-radio1' data-radio-id='tpl1-radio1-`+i+`' >
-							<h2 class='tpl1-h2'>`+list[i].name+`</h2>
+						<button type='button' class='tpl1-h2 tpl1-contentToggler' data-active='this' data-radio-name='tpl1-radio1' data-radio-id='tpl1-radio1-`+i+`' >
+							<h2>`+list[i].name+`</h2>
 						</button>
 						<div class='tpl1-contentItemContent'>
 							@@include('../contents/`+list[i].content+`.html')
