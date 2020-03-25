@@ -1,4 +1,6 @@
 .form {
+	background-color: @white;
+	
 	&-header {
 		margin-bottom: 30px;
 	}
@@ -20,6 +22,20 @@
 		
 		&:last-child {
 			margin-top: 5px;
+		}
+	}
+	
+	&-note {
+		font-size: 12px;
+		line-height: 18px;
+		text-align: center;
+		letter-spacing: 0.02em;
+		color: @grey1;
+		margin-top: 15px;
+		
+		a {
+			white-space: nowrap;
+			text-decoration: underline;
 		}
 	}
 	
@@ -213,7 +229,6 @@
 .checkbox {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
 	padding-top: 5px;
 	
 	&-title {
