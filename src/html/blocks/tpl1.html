@@ -1,0 +1,58 @@
+<div class='container'>
+	<h1>@@h</h1>
+</div>
+
+<section class='tpl1'>
+	<div class='container'>
+		<div class='tpl1-content'>
+			<div class='tpl1-note'>
+				<p>@@note</p>
+			</div>
+			<aside class='tpl1-aside'>
+				<ul class='tpl1-nav'>
+					
+					@@for(let i = 0; i < 1; i++) {
+						<li class='tpl1-navItem'>
+							<button type='button' class='tpl1-navToggler _active' data-radio-uncheck='tpl1-radio' data-radio-for='tpl1-radio-`+i+`' data-radio-name='tpl1-radio' data-radio-id='tpl1-radio-`+i+`'>
+								<h2 class='tpl1-h2'>`+list[i].name+`</h2>
+							</button>
+						</li>
+					}
+					@@for(let i = 1; i < list.length; i++) {
+						<li class='tpl1-navItem'>
+							<button type='button' class='tpl1-navToggler' data-radio-uncheck='tpl1-radio' data-radio-for='tpl1-radio-`+i+`' data-radio-name='tpl1-radio' data-radio-id='tpl1-radio-`+i+`'>
+								<h2 class='tpl1-h2'>`+list[i].name+`</h2>
+							</button>
+						</li>
+					}
+					
+				</ul>
+			</aside>
+			<ul class='tpl1-contentList'>
+				
+				@@for(let i = 0; i < 1; i++) {
+					<li class='tpl1-contentItem _active' data-radio-name='tpl1-radio' data-radio-id='tpl1-radio-`+i+`'>
+						<button type='button' class='tpl1-contentToggler _active' data-active='this'>
+							<h2 class='tpl1-h2'>`+list[i].name+`</h2>
+						</button>
+						<div class='tpl1-contentItemContent'>
+							@@include('../contents/`+list[i].content+`.html')
+						</div>
+					</li>
+				}
+				
+				@@for(let i=1; i < list.length; i++) {
+					<li class='tpl1-contentItem' data-radio-name='tpl1-radio' data-radio-id='tpl1-radio-`+i+`'>
+						<button type='button' class='tpl1-contentToggler' data-active='this'>
+							<h2 class='tpl1-h2'>`+list[i].name+`</h2>
+						</button>
+						<div class='tpl1-contentItemContent'>
+							@@include('../contents/`+list[i].content+`.html')
+						</div>
+					</li>
+				}
+				
+			</ul>
+		</div>
+	</div>
+</section>
