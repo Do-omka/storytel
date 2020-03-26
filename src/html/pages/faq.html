@@ -1,1 +1,8 @@
 @@loop("../blocks/tpl1.html", "contents/faq/index.json")
+
+<script>
+	document.querySelector('.tpl1').addEventListener('scroll', function handler() {
+		document.querySelector('.tpl1').classList.add('_scrolled')
+		document.querySelector('.tpl1').removeEventListener('scroll', handler)
+	})
+</script>
