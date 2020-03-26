@@ -1,3 +1,8 @@
+body {
+	max-height: 100vh;
+	overflow: hidden;
+}
+
 .h1 {
 	margin-top: 50px;
 	margin-bottom: 20px;
@@ -13,6 +18,7 @@
 
 .tpl1 {
 	padding-bottom: 50px;
+	overflow-y: auto;
 	
 	&-note {
 		line-height: 26px;
@@ -26,6 +32,8 @@
 	}
 	
 	&-aside {
+		position: sticky;
+		top: 0;
 		align-self: flex-start;
 	}
 	
