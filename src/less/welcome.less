@@ -1,0 +1,59 @@
+@import 'template/index';
+
+body {
+	background-color: @light;
+	background-image: url(/img/welcome.png);
+	background-size: cover;
+}
+
+.welcome {
+	padding-top: 50px;
+	
+	&-content {
+		max-width: 250px;
+	}
+	
+	.h1 {
+		font-size: 32px;
+		line-height: 38px;
+		margin-bottom: 10px;
+	}
+	
+	.p {
+		margin-bottom: 20px;
+	}
+	
+	@media (@sm) {
+		padding-top: 200px;
+		padding-bottom: 400px;
+		
+		&-content {
+			max-width: 50%;
+		}
+		.h1 {
+			font-size: 70px;
+			line-height: 75px;
+			margin-bottom: 20px;
+		}
+		.p {
+			font-size: 21px;
+			line-height: 30px;
+			margin-bottom: 30px;
+		}
+	}
+	
+	@media (@lg) {
+		padding-top: 100px;
+		padding-bottom: 300px;
+		
+		.h1 {
+			font-size: 58px;
+			line-height: 74px;
+		}
+		
+		.p {
+			font-size: 24px;
+			line-height: 38px;
+		}
+	}
+}
