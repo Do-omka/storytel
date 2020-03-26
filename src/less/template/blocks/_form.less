@@ -278,3 +278,78 @@
 		border-color: @main;
 	}
 }
+
+select {
+	.dn();
+}
+
+.customSelect {
+	.c();
+
+	&:not(.is-open) .custom-select {
+		&-panel {
+			.hidden();
+			transform: translateY(25%);
+		}
+	}
+	&.is-open .custom-select {
+		&-opener {
+			&::after {
+				color: @main;
+				transform: rotate(-180deg);
+			}
+		}
+	}
+	
+	.custom-select {
+		&-panel {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 18px;
+			color: @black;
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
+			transition: .2s;
+			margin-top: 10px;
+			overflow-y: auto;
+			max-height: 248px;
+			
+			&::-webkit-scrollbar {
+				width: 4px;
+			}
+		}
+		
+		&-inner {
+			// overflow-y: auto;
+			// max-height: 248px;
+			// 
+			// &::-webkit-scrollbar {
+			// 	width: 4px;
+			// }
+		}
+		&-option {
+			padding: 10px 20px;
+			
+			&.has-focus {
+				background-color: @lightgrey1;
+			}
+			
+			&[data-value="Выберите жанр"] {
+				display: none;
+			}
+		}
+		
+		&-opener {
+			display: flex;
+			justify-content: space-between;
+			.input();
+			
+			&::after {
+				.ifnt(angle);
+				font-size: 24px;
+				margin-left: 10px;
+				transition: .2s;
+			}
+		}
+	}
+}
