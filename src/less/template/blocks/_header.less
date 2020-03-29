@@ -7,8 +7,11 @@
 	z-index: 3;
 	
 	&._stuck,
-	&._stuck &-navSubcontent{
-		background-color: @white;
+	&._active {
+		&,
+		.header-navSubmenu {
+			background-color: @white;
+		}
 	}
 	
 	&-content {
