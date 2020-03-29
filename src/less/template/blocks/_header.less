@@ -95,7 +95,6 @@
 			.container();
 			flex-direction: row;
 			justify-content: space-between;
-			align-items: center;
 		}
 		
 		&-logo {
@@ -108,14 +107,26 @@
 			display: none;
 		}
 		
+		@lip: 30px;
+		
 		&-nav {
-			padding: 20px 0;
+			padding: @lip 0;
 		}
 		
-		@lip: 30px;
+		&-navContent {
+			flex-grow: 1;
+		}
 		
 		&-navContent {
 			.row(@lip);
+		}
+		
+		&-navItem {
+			justify-content: center;
+		}
+		
+		&-navLink {
+			flex-grow: 0;
 		}
 		
 		&-navSubmenu {
@@ -124,6 +135,7 @@
 			right: @lip;
 			padding: 20px;
 			width: 255px;
+			box-shadow: @shadow;
 		}
 	}
 	@media (@lgx) {
