@@ -61,12 +61,14 @@ function img() {
 			imgmin.svgo(svgOptions)
 			]))
 		.pipe(gulp.dest('docs/img'))
+		.pipe(bs.stream())
 }
 
 function fnt() {
 	return gulp.src('src/fnt/*', {since: gulp.lastRun(fnt)})
 		.pipe(newer('docs/fnt'))
 		.pipe(gulp.dest('docs/fnt'))
+		.pipe(bs.stream())
 }
 
 function icons() {
