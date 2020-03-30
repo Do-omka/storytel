@@ -95,9 +95,10 @@ body {
 	
 	@media (@sm) {
 		padding-bottom: 70px;
+		@gap: 15px;
 		
 		&-content {
-			.row();
+			.row(@gap);
 			justify-content: space-between;
 		}
 		
@@ -107,6 +108,7 @@ body {
 		}
 		
 		&-aside {
+			top: -@gap;
 			.col(4);
 		}
 		
