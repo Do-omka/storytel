@@ -8,10 +8,7 @@
 	
 	&._stuck,
 	&._active {
-		&,
-		.header-navSubmenu {
-			background-color: @white;
-		}
+		background-color: @white;
 	}
 	
 	&-content {
@@ -59,7 +56,6 @@
 			.ifnt(angle);
 			font-size: 14px;
 			margin-left: 10px;
-			transition: .2s;
 		}
 		
 		&._active {
@@ -71,18 +67,25 @@
 		}
 	}
 	
+	&-navDrop::after,
 	&-navSubmenu {
-		transition: .2s;
+		transition: .3s;
+	}
+	
+	&-navSubmenu {
+		max-height: 200px;
+		overflow: hidden;
+	}
+	
+	&-navDrop:not(._active) + &-navSubmenu {
+		.hidden();
+		max-width: none;
 	}
 	
 	&-navSubcontent {
 		.row(12.5px);
 		flex-direction: column;
-	}
-	
-	&-navDrop:not(._active) + &-navSubmenu {
-		.hidden();
-		transform: translateX(100%);
+		padding: 20px;
 	}
 	
 	@media (@sm) {
@@ -133,8 +136,7 @@
 			position: absolute;
 			top: 100%;
 			right: @lip;
-			padding: 20px;
-			width: 255px;
+			min-width: 255px;
 			box-shadow: @shadow;
 		}
 	}
