@@ -67,6 +67,7 @@
 	letter-spacing: 0.04em;
 	
 	&-title {
+		order: -1;
 		text-transform: uppercase;
 		margin-bottom: 6px;
 		
@@ -116,6 +117,14 @@
 	
 	input {
 		width: 100%;
+	}
+	
+	&:invalid:focus {
+		border-color: @main; 
+		
+		+ .label-title  {
+			color: @main;
+		}
 	}
 	
 	&::placeholder {

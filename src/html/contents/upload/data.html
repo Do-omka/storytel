@@ -23,44 +23,45 @@
 		</div>
 		<div class='form-item'>
 			<label class='label'>
-				<span class='label-title'>Название</span>
 				<input type='text' name='' class='input' />
+				<span class='label-title'>Название</span>
 			</label>
 		</div>
 		<div class='form-item'>
 			<label class='label'>
+				<textarea name='' rows='4' class='input'></textarea>
 				<span class='label-title _hint'>
 					<span>Описание</span>
 					<span class='label-hint _hint'>не более 300 символов</span>
 				</span>
-				<textarea name='' rows='4' class='input'></textarea>
 			</label>
 		</div>
 		<div class='form-item'>
 			<label class='label'>
-				<span class='label-title'>Жанр</span>
 				<select name=''>
 					<option disabled selected>Выберите жанр</option>
 					@@for(let i = 1; i < 11; i++) {
 						<option value='genre`+i+`'>genre`+i+`</option>
 					}
 				</select>
+				<span class='label-title'>Жанр</span>
 			</label>
 		</div>
 		<div class='form-item'>
 			<label class='label'>
+				<input type='text' name='' class='input' />
 				<span class='label-title'>Автор</span>
-				<input type='text' name='' class='input' />
 			</label>
 		</div>
 		<div class='form-item'>
 			<label class='label'>
+				<input type='text' name='' class='input' />
 				<span class='label-title'>Чтец</span>
-				<input type='text' name='' class='input' />
 			</label>
 		</div>
 		<div class='form-item'>
 			<label class='label'>
+				<input type='file' name='' class='file-input' />
 				<span class='label-title _hint'>
 					<span>Обложка</span>
 					<span class='label-hint _hint'>
@@ -68,7 +69,6 @@
 					</span>
 				</span>
 				<span class='file'>
-					<input type='file' name='' class='file-input' />
 					<span class='file-title'>Выбрать файл .png, .jpg</span>
 				</span>
 			</label>
