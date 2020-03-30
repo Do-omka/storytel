@@ -104,4 +104,15 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 		})
 	}
 	
+	if (document.querySelector('input')) {
+		document.querySelectorAll('input').forEach(function(elem) {
+			elem.addEventListener('invalid', function(e) {
+				elem.classList.add('_required')
+				elem.addEventListener('blur', function(e) {
+					elem.classList.remove('_required')
+				})
+			})
+		})
+	}
+	
 })
