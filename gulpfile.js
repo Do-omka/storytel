@@ -4,7 +4,7 @@ const
 	gulp = require('gulp'),
 	rename = require('rename'),
 	newer = require('gulp-changed'),
-	htmlinclude = require('gulp-file-include'),
+	includefile = require('gulp-file-include'),
 	postcss = require('gulp-postcss'),
 	less = require('gulp-less'),
 	less_newer = require('gulp-less-changed'),
@@ -24,7 +24,7 @@ const
 
 function html() {
 	return gulp.src('src/html/*.html')
-		.pipe(htmlinclude())
+		.pipe(includefile())
 		.pipe(gulp.dest('docs'))
 		.pipe(bs.stream())
 }
@@ -47,6 +47,7 @@ function css() {
 
 function js() {
 	return gulp.src('src/js/*.js', {sourcemaps: true})
+		.pipe(includefile())
 		.pipe(babel({
 			presets: ['@babel/env']
 		}))
