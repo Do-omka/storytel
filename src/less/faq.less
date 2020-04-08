@@ -12,6 +12,11 @@
 		color: @black;
 	}
 	
+	&-aside {
+		background: @white;
+		z-index: 1;
+	}
+	
 	@media (@lg) {
 		&-aside {
 			.col(4);
@@ -36,7 +41,7 @@
 		transition: .2s;
 		pointer-events: none;
 	}
-	&._scrolled::after {
+	&:not(._blurred)::after {
 		transform: translateY(100%);
 	}
 	
