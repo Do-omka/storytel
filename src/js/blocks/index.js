@@ -130,3 +130,25 @@ if (document.querySelector('input.file-input')) {
 		})
 	})
 }
+
+if (document.querySelector('form.form')) {
+	document.querySelectorAll('form.form').forEach(function(form) {
+		form.addEventListener('submit', function(e) {
+			e.preventDefault()
+			
+			let ajax = new XMLHttpRequest(),
+			data = new FormData(form)
+			
+			ajax.onloadend = ()=> {
+				if (ajax.readyState === 4 && ajax.status === 200) {
+					form.reset()
+				} else {
+					alert('Упс... что-то пошло не так.')
+				}
+			} 
+			ajax.open(form.getAttribute('method'), form.getAttribute('action'))
+			ajax.send(data)
+			
+		})
+	})
+}
