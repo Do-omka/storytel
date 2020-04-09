@@ -113,3 +113,20 @@ if (document.querySelector('input')) {
 		})
 	})
 }
+
+if (document.querySelector('input.file-input')) {
+	document.querySelectorAll('input.file-input').forEach(function(input) {
+		let
+		label = input.closest('label'),
+		title = label.querySelector('.file-title'),
+		placeholder = title.innerHTML
+		
+		input.closest('form').addEventListener('reset', function(e) {
+			title.innerHTML = placeholder
+		})
+		
+		input.addEventListener('change', function(e) {
+			title.textContent = input.files[0].name
+		})
+	})
+}
