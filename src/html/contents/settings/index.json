@@ -15,6 +15,7 @@
 				"name": "Банковские реквизиты",
 				"content": "settings/bank"
 			}
-		]
+		],
+		"noteRight": true
 	}
 ]

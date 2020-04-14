@@ -1,13 +1,13 @@
 <div class='container'>
 	<h1 class='h1'>@@h</h1>
+	<div class='tpl1-note @@if (noteRight == true) {_main}'>
+		<p>@@note</p>
+	</div>
 </div>
 
 <section class='tpl1'>
 	<div class='container'>
 		<div class='tpl1-content'>
-			<div class='tpl1-note'>
-				<p>@@note</p>
-			</div>
 			<aside class='tpl1-aside'>
 				<ul class='tpl1-nav'>
 					
@@ -53,6 +53,11 @@
 				}
 				
 			</ul>
+			@@if (noteRight == true) {
+				<div class='tpl1-note _right'>
+					<p>@@note</p>
+				</div>
+			}
 		</div>
 	</div>
 </section>
