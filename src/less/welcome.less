@@ -1,15 +1,18 @@
 @import 'template/index';
 
 body {
-	background-color: @light;
-	background-image: url(/img/welcome.png);
-	background-size: cover;
+	background: @light url(/img/welcome.png)  center / cover;
+	
+	@media (@smx) {
+		background-image: url(/img/welcome-smx.png);
+		// background-attachment: fixed;
+	}
 }
 
 .welcome {
 	font-weight: 300;
 	color: @dark;
-	padding-top: 50px;
+	padding: 64px 0;
 	
 	&-content {
 		max-width: 250px;
@@ -23,6 +26,12 @@ body {
 	
 	.p {
 		margin-bottom: 20px;
+	}
+	
+	@media (@smx) {
+		.h1 {
+			max-width: 60%;
+		}
 	}
 	
 	@media (@sm) {
