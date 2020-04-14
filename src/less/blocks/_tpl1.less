@@ -1,6 +1,12 @@
-body {
-	max-height: 100vh;
-	overflow: hidden;
+@media (@sm) {
+	body {
+		max-height: 100vh;
+		overflow: hidden;
+	}
+	
+	.tpl1 {
+		overflow-y: auto;
+	}
 }
 
 .h1 {
@@ -18,7 +24,6 @@ body {
 
 .tpl1 {
 	padding-bottom: 50px;
-	overflow-y: auto;
 	
 	&-note {
 		line-height: 26px;
@@ -94,9 +99,32 @@ body {
 		transition: .2s;
 	}
 	
+	@media (@smx) {
+		&-aside {
+			.dn();
+		}
+		
+		&-contentItem {
+			border-top: 1px solid @lightgrey3;
+			
+			&:last-child {
+				border-bottom: 1px solid @lightgrey3;
+			}
+		}
+		
+		&-contentItemContent {
+			padding-top: 5px;
+		}
+		
+		&-contentToggler:not(._active) ~ &-contentItemContent {
+			.hidden();
+			transform: translateX(100%);
+		}
+	}
+	
 	@media (@sm) {
-		padding-bottom: 70px;
 		@gap: 15px;
+		padding-bottom: 70px;
 		
 		&-content {
 			.row(@gap);
@@ -127,26 +155,9 @@ body {
 		}
 	}
 	
-	@media (@smx) {
-		&-aside {
-			.dn();
-		}
-		
-		&-contentItem {
-			border-top: 1px solid @lightgrey3;
-			
-			&:last-child {
-				border-bottom: 1px solid @lightgrey3;
-			}
-		}
-		
-		&-contentItemContent {
-			padding-top: 5px;
-		}
-		
-		&-contentToggler:not(._active) ~ &-contentItemContent {
-			.hidden();
-			transform: translateX(100%);
+	@media (@sm) and (@lgx) {
+		&-note {
+			max-width: 70%;
 		}
 	}
 	
