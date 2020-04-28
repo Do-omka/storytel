@@ -1,11 +1,15 @@
 @import 'template/index';
 
 body {
-	background: @light url(/img/welcome.png)  center / cover;
+	background: #EC9896 no-repeat url(/img/welcome.png) center / auto 100%;
 	
 	@media (@smx) {
 		background-image: url(/img/welcome-smx.png);
 		// background-attachment: fixed;
+	}
+	
+	@media (@lgx) {
+		background-image: url(/img/welcome-lgx.png);
 	}
 }
 
@@ -22,6 +26,7 @@ body {
 		font-size: 32px;
 		line-height: 38px;
 		margin-bottom: 10px;
+		word-break: normal;
 	}
 	
 	.p {
@@ -41,11 +46,13 @@ body {
 		&-content {
 			max-width: 50%;
 		}
+		
 		.h1 {
 			font-size: 70px;
 			line-height: 75px;
 			margin-bottom: 20px;
 		}
+		
 		.p {
 			font-size: 21px;
 			line-height: 30px;
