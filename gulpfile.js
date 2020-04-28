@@ -59,8 +59,11 @@ function img() {
 	return gulp.src('src/img/**', {since: gulp.lastRun(img)})
 		.pipe(newer('docs/img'))
 		.pipe(imgmin([
+			imgmin.gifsicle(),
+			imgmin.mozjpeg(),
+			imgmin.optipng(),
 			imgmin.svgo(svgOptions)
-			]))
+		]))
 		.pipe(gulp.dest('docs/img'))
 		.pipe(bs.stream())
 }
