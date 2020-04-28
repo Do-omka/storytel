@@ -138,4 +138,4 @@ function serve() {
 // tasks
 gulp.task('default', gulp.parallel(serve, watch_html, watch_img, watch_fnt, watch_icons, watch_css, watch_js))
 
-gulp.task('run', gulp.parallel(html, img, fnt, icons, css, js))
+gulp.task('run', gulp.parallel(gulp.series(img, fnt, icons, css), html, js))
