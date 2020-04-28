@@ -14,6 +14,14 @@ if (document.querySelector('.popup')) {
 	})
 }
 
+function toPopup(popup) {
+	if (popup && !popup.classList.contains('_popup')) {
+		popup.classList.add('_popup')
+		popuplvl++
+		document.querySelector('body').classList.add('overflow')
+	}
+}
+
 if (document.querySelector('[data-popup]')) {
 	document.querySelectorAll('[data-popup]').forEach(function(elem) {
 		elem.addEventListener('click', function(e) {
@@ -24,11 +32,7 @@ if (document.querySelector('[data-popup]')) {
 				popup = document.querySelector(elem.getAttribute('data-popup'))
 			}
 			
-			if(popup && !popup.classList.contains('_popup')) {
-				popup.classList.add('_popup')
-				popuplvl++
-				document.querySelector('body').classList.add('overflow')
-			}
+			toPopup(popup)
 		})
 	})
 }
