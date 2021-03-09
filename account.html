@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+	<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+	<title>Storytel</title>
+	<link href='./css/account.css' type='text/css' rel='stylesheet'>
+</head>
+<body>
+	<header class='header'>
+	<section class='header-content'>
+		<div class='header-item header-logo'>
+			<a href='./' class='logo-img'>
+				<img src='./img/logo-v.svg' alt='Лого' class='_v' />
+				<img src='./img/logo-h.svg' alt='Лого' class='_h' />
+			</a>
+			<div class='header-expand'>
+				<button type='button' class='menuExpand' data-active='this, .header-nav' >
+					<div class='menuExpand-inner'>
+						<span class='menuExpand-bar _1'></span>
+						<span class='menuExpand-bar _2'></span>
+						<span class='menuExpand-bar _3'></span>
+					</div>
+				</button>
+			</div>
+		</div>
+		<nav class='header-item header-nav'>
+			<ul class='header-navContent'>
+				<li class='header-navItem'>
+					<a href='' class='header-navLink'>
+						О Storytel
+					</a>
+				</li>
+				<li class='header-navItem'>
+					<a href='' class='header-navLink'>
+						FAQ
+					</a>
+				</li>
+				<li class='header-navItem _dropdown'>
+					<button type='button' class='header-navDrop' data-active='this, .header'>
+						Личный кабинет
+					</button>
+					<div class='header-navSubmenu'>
+						<ul class='header-navSubcontent'>
+							<li class='header-navSubitem'>
+								<a href='' class='header-navLink'>
+									Профиль
+								</a>
+							</li>
+							<li class='header-navSubitem'>
+								<a href='' class='header-navLink'>
+									Настройки
+								</a>
+							</li>
+							<li class='header-navSubitem'>
+								<a href='' class='header-navLink'>
+									Выйти
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</section>
+</header>
+
+	
+	<section class='title'>
+	<div class='container'>
+		<div class='title-content'>
+			<div class='title-item'>
+				<h1 class='h1'>Загруженные материалы</h1>
+			</div>
+			<div class='title-item _btn'>
+				<a href='' class='btn'>Загрузить файл</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class='contents'>
+	<div class='container'>
+		<ul class='contents-content'>
+			<li class='contents-itemContainer'>
+	<article class='contents-item'>
+		<figure class='contents-cover'>
+			<img src='./img/cover.png' alt='Обложка' class='contents-coverImg' />
+		</figure>
+		<div class='contents-status _ok'>Одобрено</div>
+		<div class='contents-dateTitle'>ДАТА ЗАГРУЗКИ</div>
+		<div class='contents-date'>01.03.2020</div>
+	</article>
+</li>
+
+			<li class='contents-itemContainer'>
+	<article class='contents-item'>
+		<figure class='contents-cover'>
+			<img src='./img/cover.png' alt='Обложка' class='contents-coverImg' />
+		</figure>
+		<div class='contents-status _mod'>Одобрено</div>
+		<div class='contents-dateTitle'>ДАТА ЗАГРУЗКИ</div>
+		<div class='contents-date'>01.03.2020</div>
+	</article>
+</li>
+
+			
+				<li class='contents-itemContainer'>
+	<article class='contents-item'>
+		<figure class='contents-cover'>
+			<img src='./img/cover.png' alt='Обложка' class='contents-coverImg' />
+		</figure>
+		<div class='contents-status _denied'>Одобрено</div>
+		<div class='contents-dateTitle'>ДАТА ЗАГРУЗКИ</div>
+		<div class='contents-date'>01.03.2020</div>
+	</article>
+</li>
+
+			
+				<li class='contents-itemContainer'>
+	<article class='contents-item'>
+		<figure class='contents-cover'>
+			<img src='./img/cover.png' alt='Обложка' class='contents-coverImg' />
+		</figure>
+		<div class='contents-status _denied'>Одобрено</div>
+		<div class='contents-dateTitle'>ДАТА ЗАГРУЗКИ</div>
+		<div class='contents-date'>01.03.2020</div>
+	</article>
+</li>
+
+			
+				<li class='contents-itemContainer'>
+	<article class='contents-item'>
+		<figure class='contents-cover'>
+			<img src='./img/cover.png' alt='Обложка' class='contents-coverImg' />
+		</figure>
+		<div class='contents-status _denied'>Одобрено</div>
+		<div class='contents-dateTitle'>ДАТА ЗАГРУЗКИ</div>
+		<div class='contents-date'>01.03.2020</div>
+	</article>
+</li>
+
+			
+				<li class='contents-itemContainer'>
+	<article class='contents-item'>
+		<figure class='contents-cover'>
+			<img src='./img/cover.png' alt='Обложка' class='contents-coverImg' />
+		</figure>
+		<div class='contents-status _denied'>Одобрено</div>
+		<div class='contents-dateTitle'>ДАТА ЗАГРУЗКИ</div>
+		<div class='contents-date'>01.03.2020</div>
+	</article>
+</li>
+
+			
+			<li id='contents-sentinel'></li>
+		</ul>
+	</div>
+</section>
+
+<section class='stats'>
+	<div class='container'>
+		<div class='stats-content'>
+			<div class='stats-item _link'>
+				<a href='' class='btn _a1'>Статистика прослушиваний</a>
+			</div>
+			<div class='stats-item _referral'>
+				<div class='stats-referral'>
+					<div class='stats-referralItem _label'>
+						<span class='label-title'>РЕФЕРАЛЬНАЯ ССЫЛКА</span>
+						<label class='input _select'>
+							<input type='text' value='https://www.storytel.com/ru/ru/categories/3-Detektivy' readonly id='tocopy' />
+							<span class='input-blur'></span>
+						</label>
+					</div>
+					<div class='stats-referralItem _copy'>
+						<button type='button' class='btn' onclick='tocopy.select();document.execCommand("copy")'>Скопировать</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	
+	<footer class='footer'>
+	<div class='container'>
+		<div class='footer-content'>
+			<div class='footer-item footer-logo'>
+				<a href='' class='logo-img'>
+					<img src='./img/logo-h.svg' alt='Лого' />
+				</a>
+			</div>
+			<div class='footer-item footer-mailto'>
+				<a href='mailtostoryportal@storytel.com' class='link'>storyportal@storytel.com</a>
+			</div>
+			<div class='footer-item footer-link'>
+				<a href=''>Пользователькое соглашение</a>
+			</div>
+			<div class='footer-item footer-link'>
+				<a href=''>Лицензионное соглашение</a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+	<script src='./js/account.js' defer></script>
+</body>
+</html>
+
